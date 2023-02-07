@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:travelday/Routes/router.dart';
 import 'package:travelday/Utils/constants.dart';
 import 'package:travelday/Utils/customfont.dart';
 
@@ -35,6 +37,9 @@ class _LoginScreenState extends State<LoginScreen> {
     // TODO: implement initState
 
     super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
+      SystemUiOverlay.bottom,
+    ]);
   }
   
 
@@ -135,7 +140,9 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.only(left: 25.0, right: 25, top: 5),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap, // foreground
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, DashboardRoute);
+      },
       child: const Text(Constants.getotp),
 //)
     );

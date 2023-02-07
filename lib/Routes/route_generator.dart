@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:travelday/Routes/router.dart';
+import 'package:travelday/Screens/dashboardscreen.dart';
 import 'package:travelday/Screens/loginscreen.dart';
 
 
@@ -12,6 +13,9 @@ class RouteGenerator {
       
       case LoginRoute:
         return MaterialPageRoute(builder: (context) => const LoginScreen());
+        case DashboardRoute:
+        return MaterialPageRoute(builder: (context) => const DashboardScreen());
+
       default:
         return MaterialPageRoute(
             builder: (context) =>
