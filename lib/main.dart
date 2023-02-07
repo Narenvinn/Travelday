@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:travelday/Routes/route_generator.dart';
+import 'package:travelday/Routes/router.dart';
+import 'package:travelday/Utils/constants.dart';
 
 void main() {
-  runApp(const MyApp());
+  //
+  //runApp(const MyApp());
+  runApp((MaterialApp(theme: ThemeData(
+    fontFamily: Constants.customFontFamily,
+    primarySwatch: Colors.green,
+  ),
+  debugShowCheckedModeBanner: false,
+  initialRoute: LoginRoute,
+  onGenerateRoute: RouteGenerator.generateRoute,)));
 }
 
 class MyApp extends StatelessWidget {
